@@ -44,6 +44,5 @@ public class StaticFragmentActivity extends Activity {
         @Override public void onStart() { super.onStart(); CallLogger.logIt(); }
         @Override public void onStop() { super.onStop(); CallLogger.logIt(); }
         @Override public void onViewCreated(View view, Bundle savedInstanceState) { super.onViewCreated(view, savedInstanceState); CallLogger.logIt(); }
-        @Override public void onViewStateRestored(Bundle savedInstanceState) { super.onViewStateRestored(savedInstanceState); CallLogger.logIt(); }
     }
 }
