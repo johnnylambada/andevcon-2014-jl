@@ -38,17 +38,19 @@ public class MainActivity extends Activity {
     private static void logIt() {
         StackTraceElement[] stacktrace = Thread.currentThread().getStackTrace();
         boolean logged = false;
-        String activityClassName = MainActivity.class.getCanonicalName();
-        String fragmentClassName = activityClassName+"$"+MyFragment.class.getSimpleName();
-        for(int i=0; i<stacktrace.length; i++){
+        boolean foundMe = false;
+        for(int i=0; i<stacktrace.length; i++) {
             StackTraceElement e = stacktrace[i];
             String methodName = e.getMethodName();
-            if (e.getClassName().equals(activityClassName) ||
-                e.getClassName().equals(fragmentClassName)){
-                if (!methodName.equals("logIt") && !methodName.startsWith("access$")) {
+            if (foundMe) {
+                if (!methodName.startsWith("access$")) {
                     Log.i(TAG, String.format(Locale.US, "%s.%s", e.getClassName(), methodName));
                     logged = true;
                     break;
+                }
+            } else {
+                if (methodName.equals("logIt")) {
+                    foundMe = true;
                 }
             }
         }
@@ -56,7 +58,7 @@ public class MainActivity extends Activity {
             Log.e(TAG, "unlogged call");
     }
 
-    public static class MyFragment extends Fragment {
+    public final static class MyFragment extends Fragment {
 
         @Override public void onInflate(Activity activity, AttributeSet attrs, Bundle sis) { super.onInflate(activity, attrs, sis); logIt(); }
 
