@@ -17,5 +17,6 @@
         android:layout_height="wrap_content"
         android:text="Dynamic Fragment"
         android:id="@+id/dynamicFragmentButton"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:onClick="startDynamicFragmentActivity" />
 </LinearLayout>
