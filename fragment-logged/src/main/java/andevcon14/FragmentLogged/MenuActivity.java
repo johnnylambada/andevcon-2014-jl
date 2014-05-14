@@ -18,6 +18,6 @@ public class MenuActivity extends Activity {
     }
 
     public void startDynamicFragmentActivity(View view){
-        startActivity(new Intent(this,StaticFragmentActivity.class));
+        startActivity(new Intent(this,DynamicFragmentActivity.class));
     }
 }

@@ -12,7 +12,7 @@ public class DynamicFragmentActivity extends LoggedActivity{
 
         if (savedInstanceState == null) {
             FragmentTransaction ft = getFragmentManager().beginTransaction();
-            Fragment newFragment = new LoggedFragment();
+            DynamicFragment newFragment = DynamicFragment.newInstance("Dynamic");
             ft.add(R.id.dynamic, newFragment);
             ft.commit();
         }
