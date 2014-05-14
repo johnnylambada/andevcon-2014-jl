@@ -9,8 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <fragment class="andevcon14.FragmentLogged.MainActivity$MyFragment"
-            android:id="@+id/embedded"
+        <FrameLayout
+            android:id="@+id/dynamic"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             />
