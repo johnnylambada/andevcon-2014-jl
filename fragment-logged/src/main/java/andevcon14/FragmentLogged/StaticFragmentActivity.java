@@ -11,8 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 public class StaticFragmentActivity extends Activity {
-    private final static String TAG = StaticFragmentActivity.class.getSimpleName();
-
     @Override public void onCreate(Bundle savedInstanceState) { super.onCreate(savedInstanceState); setContentView(R.layout.static_fragment_activity_layout); CallLogger.logIt(); }
     @Override public void onDestroy() { super.onDestroy(); CallLogger.logIt(); CallLogger.logIt(); }
     @Override public void onNewIntent(Intent intent) { super.onNewIntent(intent); CallLogger.logIt(); }
