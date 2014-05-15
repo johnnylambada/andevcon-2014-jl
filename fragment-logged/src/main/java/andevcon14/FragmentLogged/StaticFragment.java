@@ -8,7 +8,7 @@ import android.util.AttributeSet;
 /**
  * Created by john on 5/14/14.
  */
-public class StaticFragment extends LoggedFragment {
+public class StaticFragment extends CenteredTextFragment {
 
     @Override
     public void onInflate(Activity activity, AttributeSet attrs, Bundle savedInstanceState) {
