@@ -6,7 +6,12 @@ import java.util.Locale;
 
 public class CallLogger {
     private final static String TAG = CallLogger.class.getSimpleName();
-    public static void logIt() {
+
+    /**
+     * Find the caller in the stack.
+     * @return The full name of the calling function or null
+     */
+    private static String getCaller() {
         StackTraceElement[] stacktrace = Thread.currentThread().getStackTrace();
         boolean logged = false;
         boolean foundMe = false;
@@ -15,9 +20,7 @@ public class CallLogger {
             String methodName = e.getMethodName();
             if (foundMe) {
                 if (!methodName.startsWith("access$")) {
-                    Log.i(TAG, String.format(Locale.US, "%s.%s", e.getClassName(), methodName));
-                    logged = true;
-                    break;
+                    return String.format(Locale.US, "%s.%s", e.getClassName(), methodName);
                 }
             } else {
                 if (methodName.equals("logIt")) {
@@ -25,7 +28,13 @@ public class CallLogger {
                 }
             }
         }
-        if (!logged)
-            Log.e(TAG, "unlogged call");
+        return null;
+    }
+    public static void logIt(){
+        String caller = getCaller();
+        if (caller==null)
+            Log.e(TAG,"unknown caller");
+        else
+            Log.i(TAG,caller);
     }
 }
