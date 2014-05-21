@@ -2,7 +2,7 @@ package andevcon14.FragmentLogged;
 
 import android.os.Bundle;
 
-public class StaticFragmentActivity extends LoggedActivity{
+public class StaticActivity extends LoggedActivity{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

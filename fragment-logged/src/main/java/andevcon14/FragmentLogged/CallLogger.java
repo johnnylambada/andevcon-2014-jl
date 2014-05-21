@@ -1,5 +1,6 @@
 package andevcon14.FragmentLogged;
 
+import android.app.Fragment;
 import android.util.Log;
 
 import java.util.Locale;
@@ -11,7 +12,7 @@ public class CallLogger {
      * Find the caller in the stack.
      * @return The full name of the calling function or null
      */
-    private static String getCaller() {
+    private static String getCaller(String stopAt) {
         StackTraceElement[] stacktrace = Thread.currentThread().getStackTrace();
         boolean logged = false;
         boolean foundMe = false;
@@ -20,21 +21,45 @@ public class CallLogger {
             String methodName = e.getMethodName();
             if (foundMe) {
                 if (!methodName.startsWith("access$")) {
-                    return String.format(Locale.US, "%s.%s", e.getClassName(), methodName);
+                    return methodName;
                 }
             } else {
-                if (methodName.equals("logIt")) {
+                if (methodName.equals(stopAt)) {
                     foundMe = true;
                 }
             }
         }
         return null;
     }
-    public static void logIt(){
-        String caller = getCaller();
+
+    private static void logFail(Object object){
+        Log.e(TAG, object.getClass().getName() + " UNKNOWN CALLER");
+    }
+
+    /**
+     * Log a generic method
+     * @param object The object calling the method
+     */
+    public static void logMethod(Object object){
+        String caller = getCaller("logMethod");
         if (caller==null)
-            Log.e(TAG,"unknown caller");
+            logFail(object);
         else
-            Log.i(TAG,caller);
+            Log.i(TAG,object.getClass().getSimpleName()+"."+caller);
+    }
+
+    public static void logFragment(Fragment fragment){
+        String caller = getCaller("logFragment");
+        if (caller==null)
+            logFail(fragment);
+        else {
+            StringBuffer b = new StringBuffer();
+            b.append(fragment.getClass().getSimpleName())
+                    .append('.')
+                    .append(caller)
+                    .append(": getActivity=")
+                    .append(fragment.getActivity()==null?"null":"value");
+            Log.i(TAG, b.toString());
+        }
     }
 }

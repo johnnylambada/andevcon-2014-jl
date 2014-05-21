@@ -15,7 +15,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".StaticFragmentActivity"/>
-        <activity android:name=".DynamicFragmentActivity"/>
+        <activity android:name=".StaticActivity"/>
+        <activity android:name=".DynamicActivity"/>
     </application>
 </manifest>

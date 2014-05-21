@@ -14,10 +14,10 @@ public class MenuActivity extends Activity {
     }
 
     public void startStaticFragmentActivity(View view){
-        startActivity(new Intent(this,StaticFragmentActivity.class));
+        startActivity(new Intent(this,StaticActivity.class));
     }
 
     public void startDynamicFragmentActivity(View view){
-        startActivity(new Intent(this,DynamicFragmentActivity.class));
+        startActivity(new Intent(this,DynamicActivity.class));
     }
 }

@@ -13,14 +13,8 @@ public class StaticFragment extends CenteredTextFragment {
     @Override
     public void onInflate(Activity activity, AttributeSet attrs, Bundle savedInstanceState) {
         super.onInflate(activity, attrs, savedInstanceState);
-
-        TypedArray a = activity.obtainStyledAttributes(attrs,
-                R.styleable.FragmentArguments);
-
+        TypedArray a = activity.obtainStyledAttributes(attrs, R.styleable.FragmentArguments);
         CharSequence cs = a.getText(R.styleable.FragmentArguments_android_label);
-
-        CallLogger.logIt();
-
         if (cs!=null)
             setText(cs.toString());
         a.recycle();

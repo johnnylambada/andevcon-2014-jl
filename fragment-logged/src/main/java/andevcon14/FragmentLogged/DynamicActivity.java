@@ -4,7 +4,7 @@ import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 
-public class DynamicFragmentActivity extends LoggedActivity{
+public class DynamicActivity extends LoggedActivity{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
