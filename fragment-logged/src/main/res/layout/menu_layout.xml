@@ -19,4 +19,11 @@
         android:id="@+id/dynamicFragmentButton"
         android:layout_gravity="center_horizontal"
         android:onClick="startDynamicFragmentActivity" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retain Fragment Instance"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/retainInstance" />
 </LinearLayout>

@@ -14,7 +14,6 @@ public class CallLogger {
      */
     private static String getCaller(String stopAt) {
         StackTraceElement[] stacktrace = Thread.currentThread().getStackTrace();
-        boolean logged = false;
         boolean foundMe = false;
         for(int i=0; i<stacktrace.length; i++) {
             StackTraceElement e = stacktrace[i];
