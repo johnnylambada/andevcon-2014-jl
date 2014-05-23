@@ -1,33 +1,21 @@
 package andevcon14.FragmentComms;
 
-import android.app.Activity;
-import android.content.Context;
+import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.CheckBox;
+import android.widget.ListView;
 
-public class MenuActivity extends Activity {
-    public final static String RETAIN_INSTANCE = "RETAIN_INSTANCE";
+public class MenuActivity extends ListActivity {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.menu_layout);
+        setListAdapter(Menu.getSimpleAdapter(this));
     }
 
-    public void startStaticFragmentActivity(View view){
-        startActivity(getIntent(StaticActivity.class));
-    }
-
-    public void startDynamicFragmentActivity(View view){
-        startActivity(getIntent(DynamicActivity.class));
-    }
-
-    private Intent getIntent(Class<?> cls) {
-        boolean retainInstance = ((CheckBox)findViewById(R.id.retainInstance)).isChecked();
-        Intent intent = new Intent(this,cls);
-        intent.putExtra(RETAIN_INSTANCE, retainInstance);
-        return intent;
+    protected void onListItemClick(ListView l, View v, int position, long id) {
+        Intent intent = Menu.getIntent(this,position);
+        startActivity(intent);
     }
 }

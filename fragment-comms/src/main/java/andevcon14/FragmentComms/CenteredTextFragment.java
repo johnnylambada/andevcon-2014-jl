@@ -20,14 +20,6 @@ public class CenteredTextFragment extends LoggedFragment {
     }
 
     @Override
-    public void onAttach(Activity activity) {
-        super.onAttach(activity);
-        boolean retainInstance = activity.getIntent()
-                .getBooleanExtra(MenuActivity.RETAIN_INSTANCE,false);
-        setRetainInstance(retainInstance);
-    }
-
-    @Override
     public void onCreate(Bundle sis) {
         super.onCreate(sis);
         BundleManager.getFromBundle(this, sis);
