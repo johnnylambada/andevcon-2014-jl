@@ -1,3 +1,4 @@
 include ':ApiDemos'
 include ':fragment'
 include ':fragment-logged'
+include ':fragment-comms'
