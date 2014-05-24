@@ -19,5 +19,6 @@
         <activity android:name=".DynamicActivity"/>
         <activity android:name=".Types.ActivityIntent.ActivityIntentStarter"/>
         <activity android:name=".Types.ActivityIntent.ActivityIntentActivity"/>
+        <activity android:name=".Types.SetArguments.SetArgumentsActivity"/>
     </application>
 </manifest>

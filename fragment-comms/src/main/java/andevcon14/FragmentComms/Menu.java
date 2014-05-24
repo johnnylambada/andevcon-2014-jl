@@ -11,11 +11,13 @@ import java.util.List;
 import java.util.Map;
 
 import andevcon14.FragmentComms.Types.ActivityIntent.ActivityIntentStarter;
+import andevcon14.FragmentComms.Types.SetArguments.SetArgumentsActivity;
 
 enum Menu {
     StaticActivity(StaticActivity.class),
     DynamicActivity(DynamicActivity.class),
-    ActivityIntent(ActivityIntentStarter.class)
+    ActivityIntent(ActivityIntentStarter.class),
+    SetArguments(SetArgumentsActivity.class),
     ;
     private final static String TITLE = "title";
     Class<? extends Activity> activityClass;
