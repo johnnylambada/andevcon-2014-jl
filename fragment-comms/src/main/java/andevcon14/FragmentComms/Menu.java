@@ -13,6 +13,7 @@ import java.util.Map;
 import andevcon14.FragmentComms.Types.ActivityIntent.ActivityIntentStarter;
 import andevcon14.FragmentComms.Types.FactoryMethod.FactoryMethodActivity;
 import andevcon14.FragmentComms.Types.LayoutElements.LayoutElementsActivity;
+import andevcon14.FragmentComms.Types.ObserverPattern.ObserverPatternActivity;
 import andevcon14.FragmentComms.Types.SetArguments.SetArgumentsActivity;
 
 enum Menu {
@@ -20,6 +21,7 @@ enum Menu {
     SetArguments(SetArgumentsActivity.class),
     LayoutElements(LayoutElementsActivity.class),
     FactoryMethod(FactoryMethodActivity.class),
+    ObserverPattern(ObserverPatternActivity.class),
     ;
     private final static String TITLE = "title";
     Class<? extends Activity> activityClass;
