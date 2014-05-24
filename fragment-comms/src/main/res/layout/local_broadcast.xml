@@ -17,7 +17,7 @@
         android:layout_weight="1"
         android:orientation="horizontal"
         >
-        <fragment android:name="andevcon14.FragmentComms.Types.ObserverPattern.ObserverPatternFragment"
+        <fragment android:name="andevcon14.FragmentComms.Types.LocalBroadcast.LocalBroadcastFragment"
             android:id="@+id/left"
             android:layout_width="0dp"
             android:layout_height="match_parent"

@@ -21,5 +21,6 @@
         <activity android:name=".Types.LayoutElements.LayoutElementsActivity"/>
         <activity android:name=".Types.FactoryMethod.FactoryMethodActivity"/>
         <activity android:name=".Types.ObserverPattern.ObserverPatternActivity"/>
+        <activity android:name=".Types.LocalBroadcast.LocalBroadcastActivity"/>
     </application>
 </manifest>
