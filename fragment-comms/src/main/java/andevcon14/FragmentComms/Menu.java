@@ -10,9 +10,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import andevcon14.FragmentComms.Types.ActivityIntent.ActivityIntentStarter;
+
 enum Menu {
     StaticActivity(StaticActivity.class),
     DynamicActivity(DynamicActivity.class),
+    ActivityIntent(ActivityIntentStarter.class)
     ;
     private final static String TITLE = "title";
     Class<? extends Activity> activityClass;

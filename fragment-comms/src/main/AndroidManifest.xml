@@ -17,5 +17,7 @@
         </activity>
         <activity android:name=".StaticActivity"/>
         <activity android:name=".DynamicActivity"/>
+        <activity android:name=".Types.ActivityIntent.ActivityIntentStarter"/>
+        <activity android:name=".Types.ActivityIntent.ActivityIntentActivity"/>
     </application>
 </manifest>
