@@ -1,14 +1,17 @@
-package andevcon14.FragmentComms;
+package andevcon14.FragmentComms.Types.LayoutElements;
 
 import android.app.Activity;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.util.AttributeSet;
 
+import andevcon14.FragmentComms.CenteredTextFragment;
+import andevcon14.FragmentComms.R;
+
 /**
  * Created by john on 5/14/14.
  */
-public class StaticFragment extends CenteredTextFragment {
+public class LayoutElementsFragment extends CenteredTextFragment {
 
     @Override
     public void onInflate(Activity activity, AttributeSet attrs, Bundle savedInstanceState) {

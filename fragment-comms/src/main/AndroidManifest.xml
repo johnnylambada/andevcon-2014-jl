@@ -15,11 +15,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".StaticActivity"/>
         <activity android:name=".DynamicActivity"/>
         <activity android:name=".Types.ActivityIntent.ActivityIntentStarter"/>
         <activity android:name=".Types.ActivityIntent.ActivityIntentActivity"/>
         <activity android:name=".Types.SetArguments.SetArgumentsActivity"/>
+        <activity android:name=".Types.LayoutElements.LayoutElementsActivity"/>
         <activity android:name=".Types.FactoryMethod.FactoryMethodActivity"/>
     </application>
 </manifest>

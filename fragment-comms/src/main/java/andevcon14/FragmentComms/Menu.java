@@ -12,13 +12,14 @@ import java.util.Map;
 
 import andevcon14.FragmentComms.Types.ActivityIntent.ActivityIntentStarter;
 import andevcon14.FragmentComms.Types.FactoryMethod.FactoryMethodActivity;
+import andevcon14.FragmentComms.Types.LayoutElements.LayoutElementsActivity;
 import andevcon14.FragmentComms.Types.SetArguments.SetArgumentsActivity;
 
 enum Menu {
-    StaticActivity(StaticActivity.class),
     DynamicActivity(DynamicActivity.class),
     ActivityIntent(ActivityIntentStarter.class),
     SetArguments(SetArgumentsActivity.class),
+    LayoutElements(LayoutElementsActivity.class),
     FactoryMethod(FactoryMethodActivity.class),
     ;
     private final static String TITLE = "title";

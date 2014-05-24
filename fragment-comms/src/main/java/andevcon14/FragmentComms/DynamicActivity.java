@@ -1,10 +1,10 @@
 package andevcon14.FragmentComms;
 
-import android.app.Fragment;
+import android.app.Activity;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 
-public class DynamicActivity extends LoggedActivity{
+public class DynamicActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

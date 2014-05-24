@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-public class CenteredTextFragment extends LoggedFragment {
+public class CenteredTextFragment extends Fragment {
     private String text = "<NOT SET>";
     private View view;
 
