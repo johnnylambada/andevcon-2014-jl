@@ -1,11 +1,8 @@
 package andevcon14.FragmentComms.Types.FactoryMethod;
 
 import android.app.Activity;
-import android.app.FragmentTransaction;
-import android.content.Intent;
 import android.os.Bundle;
 
-import andevcon14.FragmentComms.DynamicFragment;
 import andevcon14.FragmentComms.R;
 
 /**

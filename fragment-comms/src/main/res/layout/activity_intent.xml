@@ -5,8 +5,9 @@
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <fragment class="andevcon14.FragmentComms.Types.ActivityIntent.ActivityIntentFragment"
+        android:id="@+id/activity_intent_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        />
+    />
 
 </LinearLayout>

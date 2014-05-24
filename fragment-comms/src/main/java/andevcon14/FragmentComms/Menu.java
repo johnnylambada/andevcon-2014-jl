@@ -16,7 +16,6 @@ import andevcon14.FragmentComms.Types.LayoutElements.LayoutElementsActivity;
 import andevcon14.FragmentComms.Types.SetArguments.SetArgumentsActivity;
 
 enum Menu {
-    DynamicActivity(DynamicActivity.class),
     ActivityIntent(ActivityIntentStarter.class),
     SetArguments(SetArgumentsActivity.class),
     LayoutElements(LayoutElementsActivity.class),
