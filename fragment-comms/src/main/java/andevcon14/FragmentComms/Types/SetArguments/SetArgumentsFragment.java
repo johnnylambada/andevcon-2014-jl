@@ -12,12 +12,6 @@ import andevcon14.FragmentComms.R;
 public class SetArgumentsFragment extends CenteredTextFragment {
     private final static String TAG = SetArgumentsFragment.class.getSimpleName();
 
-    public static SetArgumentsFragment newInstance(String text){
-        SetArgumentsFragment fragment = new SetArgumentsFragment();
-        fragment.setText(text);
-        return fragment;
-    }
-
     // onAttach is a good spot to read the arguments from the Activity -- you know you have an
     // Activity since it's passed in as an argument, and it works for both Static and Dynamic
     // Fragments.  onResume is not a good place since CenteredTextFragment's onResume is where

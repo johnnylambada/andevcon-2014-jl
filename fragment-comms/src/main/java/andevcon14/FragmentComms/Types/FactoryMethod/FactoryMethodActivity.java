@@ -1,4 +1,4 @@
-package andevcon14.FragmentComms.Types.SetArguments;
+package andevcon14.FragmentComms.Types.FactoryMethod;
 
 import android.app.Activity;
 import android.app.FragmentTransaction;
@@ -11,19 +11,14 @@ import andevcon14.FragmentComms.R;
 /**
  * This activity hosts the fragment
  */
-public class SetArgumentsActivity extends Activity {
+public class FactoryMethodActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.set_arguments);
 
         if (savedInstanceState == null) {
-            Bundle bundle = new Bundle();
-            bundle.putString("text",this.getClass().getSimpleName());
-
-            SetArgumentsFragment fragment = new SetArgumentsFragment();
-            fragment.setArguments(bundle);
-
+            FactoryMethodFragment fragment = FactoryMethodFragment.newInstance(this.getClass().getSimpleName());
             getFragmentManager()
                 .beginTransaction()
                 .add(R.id.dynamic, fragment)

@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 import andevcon14.FragmentComms.Types.ActivityIntent.ActivityIntentStarter;
+import andevcon14.FragmentComms.Types.FactoryMethod.FactoryMethodActivity;
 import andevcon14.FragmentComms.Types.SetArguments.SetArgumentsActivity;
 
 enum Menu {
@@ -18,6 +19,7 @@ enum Menu {
     DynamicActivity(DynamicActivity.class),
     ActivityIntent(ActivityIntentStarter.class),
     SetArguments(SetArgumentsActivity.class),
+    FactoryMethod(FactoryMethodActivity.class),
     ;
     private final static String TITLE = "title";
     Class<? extends Activity> activityClass;
