@@ -7,7 +7,7 @@ import android.os.Bundle;
 import andevcon14.FragmentComms.R;
 
 /**
- * This activity sets up the next activity
+ * This activity hosts the fragment
  */
 public class ActivityIntentActivity extends Activity {
     @Override

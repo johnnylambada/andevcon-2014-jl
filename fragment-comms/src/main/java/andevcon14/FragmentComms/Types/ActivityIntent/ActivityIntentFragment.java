@@ -16,7 +16,7 @@ public class ActivityIntentFragment extends CenteredTextFragment {
     // Activity since it's passed in as an argument, and it works for both Static and Dynamic
     // Fragments.  onResume is not a good place since CenteredTextFragment's onResume is where
     // we actually use the argument, and its onResume will be called before this one.
-    
+
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
