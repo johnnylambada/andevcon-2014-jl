@@ -11,7 +11,7 @@ import android.widget.TextView;
 import andevcon14.FragmentComms.R;
 
 public class LocalBroadcastFragment extends Fragment
-implements Counter.Observer, MinusPlusButtonInterface{
+implements MinusPlusButtonInterface{
     private Button minusButton, plusButton;
     private TextView count;
     @Override
@@ -32,10 +32,5 @@ implements Counter.Observer, MinusPlusButtonInterface{
     @Override
     public void onPlusButton(View view) {
         ((MinusPlusButtonInterface)getActivity()).onPlusButton(view);
-    }
-
-    @Override
-    public void onCount(int count) {
-        this.count.setText(""+count);
     }
 }

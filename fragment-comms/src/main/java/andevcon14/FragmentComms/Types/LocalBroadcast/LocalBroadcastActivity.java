@@ -9,7 +9,7 @@ import android.widget.TextView;
 import andevcon14.FragmentComms.R;
 
 public class LocalBroadcastActivity extends Activity
-implements Counter.Observer, MinusPlusButtonInterface{
+implements MinusPlusButtonInterface{
     private static final String COUNTER_KEY = "COUNTER_KEY";
     private Button minusButton, plusButton;
     private TextView count;
@@ -44,34 +44,13 @@ implements Counter.Observer, MinusPlusButtonInterface{
     @Override
     protected void onPause() {
         super.onPause();
-        counter.unRegister(this);
-        counter.unRegister(
-                (Counter.Observer)
-                getFragmentManager()
-                .findFragmentById(R.id.left));
-        counter.unRegister(
-                (Counter.Observer)
-                getFragmentManager()
-                .findFragmentById(R.id.right));
+        // TODO: unregister this (& in Fragments, unregister too)
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        counter.register(this);
-        counter.register(
-                (Counter.Observer)
-                getFragmentManager()
-                .findFragmentById(R.id.left));
-        counter.register(
-                (Counter.Observer)
-                getFragmentManager()
-                .findFragmentById(R.id.right));
-    }
-
-    @Override
-    public void onCount(int count) {
-        this.count.setText(""+count);
+        // TODO: register this (& in Fragments, unregister too)
     }
 
     @Override
