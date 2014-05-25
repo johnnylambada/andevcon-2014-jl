@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- These are the attributes that we want to retrieve for
+     StaticFragment.java -->
+
+    <declare-styleable name="FragmentArguments">
+        <attr name="android:label" />
+    </declare-styleable>
+</resources>
