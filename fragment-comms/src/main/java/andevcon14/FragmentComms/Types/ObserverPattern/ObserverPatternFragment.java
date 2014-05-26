@@ -11,7 +11,7 @@ import android.widget.TextView;
 import andevcon14.FragmentComms.R;
 
 public class ObserverPatternFragment extends Fragment
-implements Counter.Observer, MinusPlusButtonInterface{
+implements Counter.Observer {
     private Button minusButton, plusButton;
     private TextView count;
     @Override
@@ -21,17 +21,22 @@ implements Counter.Observer, MinusPlusButtonInterface{
         minusButton = (Button) view.findViewById(R.id.minusButton);
         plusButton = (Button) view.findViewById(R.id.plusButton);
         count = (TextView) view.findViewById(R.id.count);
+
+        minusButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ((MinusPlusButtonInterface)getActivity()).onMinusButton(view);
+            }
+        });
+
+        plusButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ((MinusPlusButtonInterface)getActivity()).onPlusButton(view);
+            }
+        });
+
         return view;
-    }
-
-    @Override
-    public void onMinusButton(View view) {
-        ((MinusPlusButtonInterface)getActivity()).onMinusButton(view);
-    }
-
-    @Override
-    public void onPlusButton(View view) {
-        ((MinusPlusButtonInterface)getActivity()).onPlusButton(view);
     }
 
     @Override

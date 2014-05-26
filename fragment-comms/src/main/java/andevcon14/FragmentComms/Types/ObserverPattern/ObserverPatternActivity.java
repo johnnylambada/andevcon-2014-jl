@@ -33,6 +33,20 @@ implements Counter.Observer, MinusPlusButtonInterface{
                     .add(R.id.right, fragment)
                     .commit();
         }
+        minusButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onMinusButton(view);
+            }
+        });
+
+        plusButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onPlusButton(view);
+            }
+        });
+
     }
 
     @Override
