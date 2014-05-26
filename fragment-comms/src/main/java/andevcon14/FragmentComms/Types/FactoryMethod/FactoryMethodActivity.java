@@ -15,7 +15,8 @@ public class FactoryMethodActivity extends Activity {
         setContentView(R.layout.set_arguments);
 
         if (savedInstanceState == null) {
-            FactoryMethodFragment fragment = FactoryMethodFragment.newInstance(this.getClass().getSimpleName());
+            FactoryMethodFragment fragment = FactoryMethodFragment
+                    .newInstance(this.getClass().getSimpleName());
             getFragmentManager()
                 .beginTransaction()
                 .add(R.id.dynamic, fragment)

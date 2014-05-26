@@ -16,23 +16,21 @@ import android.widget.Toast;
 import andevcon14.FragmentCommsSupport.R;
 
 public class LocalBroadcastFragment extends Fragment {
-    private Button minusButton, plusButton;
-    private TextView count;
     private BroadcastReceiver countReceiver;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle sis) {
         super.onCreateView(inflater, container, sis); // I want LoggedFragment's side effect
         View view = inflater.inflate(R.layout.minus_text_plus, container, false);
-        minusButton = (Button) view.findViewById(R.id.minusButton);
-        plusButton = (Button) view.findViewById(R.id.plusButton);
-        count = (TextView) view.findViewById(R.id.count);
+        Button minusButton = (Button) view.findViewById(R.id.minusButton);
+        Button plusButton = (Button) view.findViewById(R.id.plusButton);
+        final TextView count = (TextView) view.findViewById(R.id.count);
 
         minusButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 CounterBroadcastHelper.getInstance()
-                        .broadcastUpdate(getActivity(),false);
+                        .broadcastUpdate(getActivity(), false);
             }
         });
 
@@ -40,14 +38,14 @@ public class LocalBroadcastFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 CounterBroadcastHelper.getInstance()
-                        .broadcastUpdate(getActivity(),true);
+                        .broadcastUpdate(getActivity(), true);
             }
         });
 
         countReceiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
-                int newCount = intent.getIntExtra(CounterBroadcastHelper.EXTRA_COUNT,0);
+                int newCount = intent.getIntExtra(CounterBroadcastHelper.EXTRA_COUNT, 0);
                 count.setText(""+newCount);
             }
         };

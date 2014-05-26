@@ -14,8 +14,6 @@ import andevcon14.FragmentCommsSupport.R;
 
 public class LocalBroadcastActivity extends FragmentActivity {
     private static final String COUNTER_KEY = "COUNTER_KEY";
-    private Button minusButton, plusButton;
-    private TextView count;
     private Counter counter = null;
     private BroadcastReceiver countReceiver, updateReceiver;
 
@@ -23,9 +21,9 @@ public class LocalBroadcastActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.local_broadcast);
-        minusButton = (Button) findViewById(R.id.minusButton);
-        plusButton = (Button) findViewById(R.id.plusButton);
-        count = (TextView) findViewById(R.id.count);
+        Button minusButton = (Button) findViewById(R.id.minusButton);
+        Button plusButton = (Button) findViewById(R.id.plusButton);
+        final TextView count = (TextView) findViewById(R.id.count);
 
         if (savedInstanceState != null) {
             counter = (Counter) savedInstanceState.getSerializable(COUNTER_KEY);
@@ -42,7 +40,7 @@ public class LocalBroadcastActivity extends FragmentActivity {
             @Override
             public void onClick(View view) {
                 CounterBroadcastHelper.getInstance()
-                        .broadcastUpdate(LocalBroadcastActivity.this,false);
+                        .broadcastUpdate(LocalBroadcastActivity.this, false);
             }
         });
 
@@ -106,6 +104,6 @@ public class LocalBroadcastActivity extends FragmentActivity {
     protected void onPostResume() {
         super.onPostResume();
         CounterBroadcastHelper.getInstance()
-                .broadcastCount(this,counter.getCount());
+                .broadcastCount(this, counter.getCount());
     }
 }

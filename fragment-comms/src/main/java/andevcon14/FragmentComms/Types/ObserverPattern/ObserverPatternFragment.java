@@ -16,7 +16,7 @@ implements Counter.Observer {
     private TextView count;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle sis) {
-        super.onCreateView(inflater, container, sis); // I want LoggedFragment's side effect
+        super.onCreateView(inflater, container, sis);
         View view = inflater.inflate(R.layout.minus_text_plus, container, false);
         minusButton = (Button) view.findViewById(R.id.minusButton);
         plusButton = (Button) view.findViewById(R.id.plusButton);

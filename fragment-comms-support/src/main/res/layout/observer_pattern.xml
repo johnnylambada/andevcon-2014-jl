@@ -17,29 +17,12 @@
         android:layout_weight="1"
         android:orientation="horizontal"
         >
-<!--        <include layout="@layout/minus_text_plus"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            />
-        <include layout="@layout/minus_text_plus"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            />
-            -->
         <fragment android:name="andevcon14.FragmentCommsSupport.Types.ObserverPattern.ObserverPatternFragment"
             android:id="@+id/left"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             />
-        <!--<fragment android:name="andevcon14.FragmentCommsSupport.Types.ObserverPattern.ObserverPatternFragment"-->
-            <!--android:id="@+id/right"-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:layout_weight="1"-->
-            <!--/>-->
         <FrameLayout
             android:id="@+id/right"
             android:layout_width="0dp"
