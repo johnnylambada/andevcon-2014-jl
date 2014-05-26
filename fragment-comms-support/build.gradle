@@ -1,0 +1,14 @@
+apply plugin: 'android'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:19.0.+'
+}
+
+android {
+    compileSdkVersion 10
+    buildToolsVersion "19.0.2"
+}
