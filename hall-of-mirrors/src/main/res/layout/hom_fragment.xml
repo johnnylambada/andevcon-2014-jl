@@ -6,18 +6,12 @@
     android:orientation="vertical"
     >
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/plusButton"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
-        <Button
-            android:id="@+id/plusButton"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:text="+"
-            />
-    </LinearLayout>
+        android:text="+"
+        />
     <LinearLayout
         android:id="@+id/border"
         android:layout_width="match_parent"

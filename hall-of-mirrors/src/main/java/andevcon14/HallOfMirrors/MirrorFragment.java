@@ -11,13 +11,12 @@ import android.widget.Button;
 public class MirrorFragment extends Fragment {
 
     public static MirrorFragment newInstance(){
-        MirrorFragment fragment = new MirrorFragment();
-        return fragment;
+        return new MirrorFragment();
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        super.onCreateView(inflater, container, savedInstanceState);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle sis) {
+        super.onCreateView(inflater, container, sis);
         final View view = inflater.inflate(R.layout.hom_fragment, container, false);
         final View plusButton = view.findViewById(R.id.plusButton);
         final View border = view.findViewById(R.id.border);
