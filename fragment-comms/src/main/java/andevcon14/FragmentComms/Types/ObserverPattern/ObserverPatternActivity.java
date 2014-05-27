@@ -11,7 +11,6 @@ import andevcon14.FragmentComms.R;
 public class ObserverPatternActivity extends Activity
 implements Counter.Observer, MinusPlusButtonInterface{
     private static final String COUNTER_KEY = "COUNTER_KEY";
-    private Button minusButton, plusButton;
     private TextView count;
     private Counter counter = null;
 
@@ -19,8 +18,8 @@ implements Counter.Observer, MinusPlusButtonInterface{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.observer_pattern);
-        minusButton = (Button) findViewById(R.id.minusButton);
-        plusButton = (Button) findViewById(R.id.plusButton);
+        Button minusButton = (Button) findViewById(R.id.minusButton);
+        Button plusButton = (Button) findViewById(R.id.plusButton);
         count = (TextView) findViewById(R.id.count);
 
         if (savedInstanceState != null) {
