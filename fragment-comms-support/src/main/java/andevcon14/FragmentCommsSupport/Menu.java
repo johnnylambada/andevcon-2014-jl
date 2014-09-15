@@ -14,6 +14,7 @@ import andevcon14.FragmentCommsSupport.Types.ActivityIntent.ActivityIntentStarte
 import andevcon14.FragmentCommsSupport.Types.FactoryMethod.FactoryMethodActivity;
 import andevcon14.FragmentCommsSupport.Types.LayoutElements.LayoutElementsActivity;
 import andevcon14.FragmentCommsSupport.Types.LocalBroadcast.LocalBroadcastActivity;
+import andevcon14.FragmentCommsSupport.Types.ManyFragments.ManyActivity;
 import andevcon14.FragmentCommsSupport.Types.ObserverPattern.ObserverPatternActivity;
 import andevcon14.FragmentCommsSupport.Types.SetArguments.SetArgumentsActivity;
 
@@ -24,6 +25,7 @@ enum Menu {
     FactoryMethod(FactoryMethodActivity.class),
     ObserverPattern(ObserverPatternActivity.class),
     LocalBroadcast(LocalBroadcastActivity.class),
+    ManyFragments(ManyActivity.class),
     ;
     private final static String TITLE = "title";
     Class<? extends Activity> activityClass;
