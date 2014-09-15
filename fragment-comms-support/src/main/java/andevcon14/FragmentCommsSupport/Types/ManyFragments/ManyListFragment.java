@@ -7,14 +7,10 @@ import android.support.v4.app.ListFragment;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
-import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.FrameLayout;
-import android.widget.TextView;
 
 import java.util.concurrent.atomic.AtomicInteger;
-
-import andevcon14.FragmentCommsSupport.Types.ManyFragments.dummy.DummyContent;
 
 /**
  * A fragment representing a list of Items.
@@ -25,42 +21,14 @@ import andevcon14.FragmentCommsSupport.Types.ManyFragments.dummy.DummyContent;
  */
 public class ManyListFragment extends ListFragment {
 
-    private static final String ARG_PARAM1 = "param1";
-
-    private String mParam1;
-
-//    private FrameLayout.LayoutParams frameLayoutParams = new FrameLayout.LayoutParams(
-//            ViewGroup.LayoutParams.MATCH_PARENT,
-//            ViewGroup.LayoutParams.MATCH_PARENT
-//    );
-
     private AbsListView.LayoutParams frameLayoutParams = new AbsListView.LayoutParams(
             ViewGroup.LayoutParams.MATCH_PARENT,
             ViewGroup.LayoutParams.MATCH_PARENT
     );
 
-    public static ManyListFragment newInstance(String param1, String param2) {
-        ManyListFragment fragment = new ManyListFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    /**
-     * Mandatory empty constructor for the fragment manager to instantiate the
-     * fragment (e.g. upon screen orientation changes).
-     */
-    public ManyListFragment() {
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-        }
 
         BaseAdapter adapter = new BaseAdapter() {
             @Override public int getCount() { return 10000; }

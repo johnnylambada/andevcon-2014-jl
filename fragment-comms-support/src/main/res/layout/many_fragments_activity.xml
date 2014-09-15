@@ -6,7 +6,6 @@
     android:layout_height="match_parent">
 
     <fragment android:name="andevcon14.FragmentCommsSupport.Types.ManyFragments.ManyListFragment"
-        android:id="@+id/left"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         />
